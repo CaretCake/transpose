@@ -1,3 +1,4 @@
+import pytest
 from src import services
 
 class TestServices:
@@ -12,7 +13,9 @@ class TestServices:
         assert transposed_matrix == [[1,2,3]]
 
     def test_transpose_empty(self):
-        transposed_matrix = services.transpose_matrix([])
-        assert transposed_matrix == []
-        transposed_matrix = services.transpose_matrix([[],[],[]])
-        assert transposed_matrix == []
+        with pytest.raises(ValueError):
+            transposed_matrix = services.transpose_matrix([],[])
+    
+    def test_transpose_matrix_invalid(self):
+        with pytest.raises(ValueError):
+            transposed_matrix = services.transpose_matrix([1,2],[3])

@@ -1,4 +1,7 @@
+"""Logic for the matrix api."""
+
 def transpose_matrix(matrix):
+    """Returns the transposed matrix"""
     if len(matrix) == 0 or len(matrix[0]) == 0:
         return []
 
