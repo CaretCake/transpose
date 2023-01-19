@@ -14,8 +14,8 @@ class TestServices:
 
     def test_transpose_empty(self):
         with pytest.raises(ValueError):
-            transposed_matrix = services.transpose_matrix([],[])
+            transposed_matrix = services.transpose_matrix([[],[]])
     
     def test_transpose_matrix_invalid(self):
         with pytest.raises(ValueError):
-            transposed_matrix = services.transpose_matrix([1,2],[3])
+            transposed_matrix = services.transpose_matrix([[1,2],[3]])
