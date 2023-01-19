@@ -13,4 +13,6 @@ class TestServices:
 
     def test_transpose_empty(self):
         transposed_matrix = services.transpose_matrix([])
-        
+        assert transposed_matrix == []
+        transposed_matrix = services.transpose_matrix([[],[],[]])
+        assert transposed_matrix == []

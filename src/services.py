@@ -1,4 +1,6 @@
 def transpose_matrix(matrix):
+    if len(matrix) == 0 or len(matrix[0]) == 0:
+        return []
 
     row_count = len(matrix)
     col_count = len(matrix[0])
